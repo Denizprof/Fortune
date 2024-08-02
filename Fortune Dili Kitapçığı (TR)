@@ -1,0 +1,122 @@
+Fortune Dili Kitapçığı 
+
+1. Giriş 
+
+Fortune, gelecekteki kuantum bilgisayarlar için özel olarak tasarlanmış bir programlama dilidir. Bu dil, kuantum hesaplamalarını daha erişilebilir ve anlaşılır hale getirmek amacıyla geliştirilmiştir. Fortune, kuantum işlemleri ve klasik kodları bir araya getirerek, kullanıcıların karmaşık kuantum algoritmalarını daha verimli bir şekilde yazmalarını sağlar. 
+
+Fortune'un geliştirilmesi, merak ve keşfetme duygusunun bir sonucudur. Daniel Deniz Akıncı, kuantum hesaplamalarına olan derin ilgisi ve merakı sayesinde bu dili oluşturmuştur. Amacı, kuantum bilgisayarlarıyla etkileşimi basit ve anlaşılır bir hale getirmektir. 
+
+2. Fortune Dilinin Temel Özellikleri 
+
+Fortune dilinin temel özellikleri şunlardır: 
+
+Kuantum Kod Blokları: Kuantum işlemlerini tanımlamak için kullanılır. 
+
+Klasik Kod Blokları: Geleneksel işlemleri tanımlamak için kullanılır. 
+
+Giriş/Çıkış Kod Blokları: Kullanıcıdan veri almayı ve veri yazmayı yönetir. 
+
+3. Fortune Dili Nasıl Çalışır? 
+
+Fortune dilinde yazılmış bir kod, aşağıdaki adımları takip ederek çalışır: 
+
+Kod Bloklarının Ayrıştırılması: Fortune dosyası içindeki kod blokları ayrıştırılır (Kuantum, Klasik, Giriş/Çıkış). 
+
+Kuantum İşlemlerinin Çalıştırılması: Kuantum kodları, kuantum bilgisayarında çalıştırılır. 
+
+Klasik İşlemlerin Çalıştırılması: Klasik kodlar, standart işlemci üzerinde çalıştırılır. 
+
+Giriş/Çıkış İşlemleri: Kullanıcıdan veri alınır ve sonuçlar kullanıcıya sunulur. 
+
+4. Fortune Dili Yaratıcısı 
+
+Fortune dili, kuantum bilgisayarlarının gelişimini desteklemek amacıyla Daniel Deniz Akıncı tarafından geliştirilmiştir. Akıncı'nın kuantum bilgisayarlarına olan merakı ve keşfetme isteği, Fortune'un ortaya çıkmasını sağlamıştır. Bu dil, kuantum hesaplamalarına olan tutkusunun bir ürünüdür ve kullanıcıların kuantum bilgisayarlarla etkileşimde bulunmalarını kolaylaştırmayı amaçlar. 
+
+5. Kullanım Kılavuzu 
+
+5.1. Kod Yazma 
+
+Fortune dilinde bir program yazarken aşağıdaki yapıyı kullanabilirsiniz: 
+
+Kuantum Kod Bloku: (quantum= ... ) 
+
+Klasik Kod Bloku: (classical= ... ) 
+
+Giriş/Çıkış Kod Bloku: (io= ... ) 
+
+Örnek Fortune Kodu: 
+
+#("Fortune")# 
+ 
+(quantum= 
+# Kuantum işlemleri 
+CREATE QUBITS 2; 
+HADAMARD QUBIT 0; 
+CNOT QUBIT 0, QUBIT 1; 
+MEASURE QUBIT 0, QUBIT 1; 
+) 
+ 
+(classical= 
+# Klasik işlemler 
+PRINT "Qubitlerin ölçümü yapıldı"; 
+) 
+ 
+(io= 
+# Giriş/Çıkış işlemleri 
+READ INPUT "Qubitlerin sayısını girin:"; ) WRITE OUTPUT  
+
+"Sonuçlar hesaplandı"; 
+ 
+
+5.2. Kodun Yorumlanması 
+
+Bir Fortune dosyası yazıldığında, aşağıdaki adımları izleyerek yorumlayabilirsiniz: 
+
+Kodun Yorumlanması: Fortune yorumlayıcısı, kodu analiz eder ve ilgili kod bloklarını çıkarır. 
+
+Kuantum İşlemlerinin Çalıştırılması: Kuantum kodları çalıştırılır ve sonuçlar hesaplanır. 
+
+Klasik İşlemlerin Çalıştırılması: Klasik kodlar yürütülür. 
+
+Giriş/Çıkış İşlemleri: Kullanıcıdan veri alınır ve sonuçlar ekrana yazdırılır. 
+
+Basit Bir Fortune Yorumlayıcı: 
+
+import re 
+ 
+def parse_fortune_code(filename): 
+    with open(filename, 'r') as file: 
+        content = file.read() 
+ 
+    # Kod bloklarını ayırma 
+    quantum_code = re.search(r'\(quantum=\n(.*?)\n\)', content, re.DOTALL).group(1) 
+    classical_code = re.search(r'\(classical=\n(.*?)\n\)', content, re.DOTALL).group(1) 
+    io_code = re.search(r'\(io=\n(.*?)\n\)', content, re.DOTALL).group(1) 
+ 
+    # Kodları ekrana yazdırma 
+    print("Kuantum Kod Bloku:\n", quantum_code) 
+    print("Klasik Kod Bloku:\n", classical_code) 
+    print("Giriş/Çıkış Kod Bloku:\n", io_code) 
+ 
+if __name__ == "__main__": 
+    parse_fortune_code('fortune.frt') 
+ 
+
+5.3. Fortune Dosyasının Çalıştırılması 
+
+Fortune kodunu çalıştırmak için şu adımları izleyebilirsiniz: 
+
+Kodun Hazırlanması: Fortune kodunuzu bir dosyaya yazın (örneğin fortune.frt). 
+
+Yorumlayıcının Çalıştırılması: Fortune yorumlayıcısını çalıştırarak kodu yorumlayın. 
+
+Terminale bu komutu yazıp çalıştırabilirsiniz 
+
+(python fortune_interpreter.py fortune.frt) 
+ 
+
+6. Sonuç 
+
+Fortune dili, kuantum hesaplamalarını daha anlaşılır hale getirmek ve kuantum bilgisayarları ile çalışmayı kolaylaştırmak için tasarlanmıştır. Kuantum ve klasik kod bloklarını bir araya getirerek esnek ve güçlü bir programlama deneyimi sunar. Akıncı'nın merak ve keşfetme duygusuyla geliştirdiği bu dil, gelecekteki kuantum teknolojilerine uyum sağlamak için önemli bir adım olarak görülmektedir. 
+
+ 
